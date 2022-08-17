@@ -16,33 +16,34 @@ args.add_argument(
 
 class Text(Resource):
     def get(self, text_id):
-        text = TextModel.find_text(text_id)
-        if text:
-            return text.json()
-        return {"message": "Text not found."}, 404
+        try: 
+            text = TextModel.find_text(text_id)
+            if not text:
+                return {"message": "Text not found."}, 404
+        except Exception as exc:
+            return exc
+        return text.json()
 
 
 class TextSubmission(Resource):
     def post(self):
-        kwargs = args.parse_args()
-        kwargs['word_count'] = count_words(kwargs['text'])
-        text = TextModel(**kwargs)
-        text.save_text()
+        try:
+            kwargs = args.parse_args()
+            kwargs['word_count'] = count_words(kwargs['text'])
+            text = TextModel(**kwargs)
+            text.save_text()
+        except Exception as exc:
+            return exc, 500
         return {"message": "Text form submitted successfully"}, 201
 
 
 class TextRemoval(Resource):
     def delete(self, text_id):
         text = TextModel.find_text(text_id)
-        if text:
-            try:
-                text.delete_text()
-            except:
-                return (
-                    {
-                        "message": "An internal error ocurred while trying to the delete a text"
-                    },
-                    500,
-                )
-            return {"message": "Text deleted."}
-        return {"message": "Text id '{}' not found.".format(text_id)}, 404
+        if not text:
+            return {"message": "Text id '{}' not found.".format(text_id)}, 404
+        try:
+            text.delete_text()
+        except Exception as exc:
+            return exc
+        return {"message": "Text deleted successfully."}
