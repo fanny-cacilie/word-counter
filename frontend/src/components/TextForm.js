@@ -3,7 +3,7 @@ import { Box, TextField } from "@mui/material";
 
 import SubmitButton from "./submitButton";
 
-export default function TextForm(props) {
+export default function TextForm() {
   const [text, setText] = useState("");
 
   return (
