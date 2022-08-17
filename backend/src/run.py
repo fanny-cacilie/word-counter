@@ -23,4 +23,4 @@ if __name__ == "__main__":
     from sql_alchemy import database
 
     database.init_app(app)
-    app.run(debug=True)
+    app.run()

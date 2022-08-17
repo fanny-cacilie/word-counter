@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+  word-count-backend:
+    build: ./backend/src
+    container_name: word-count-backend
+    ports:
+      - "5000:5000"
+
+  word-count-frontend:
+    build: ./frontend
+    container_name: word-count-frontend
+    ports:
+      - 3000:80
+    depends_on:
+      - word-count-backend
+
+volumes:
+  word-count:
