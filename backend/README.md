@@ -18,7 +18,7 @@ The application is developed with:
 
 First, make sure you have <b>Python</b> and <b>pip</b> installed on your computer.
 
-In the project '/backend' directory, run the following command to install the required packages: 
+In the project '/backend/src' directory, run the following command to install the required packages: 
 
 `pip install requirements.txt `
 
