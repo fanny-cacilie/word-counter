@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-import './App.css';
+import "./App.css";
 import { CodeLink } from "./components/CodeLink";
 import TextForm from "./components/TextForm";
 import { WordCount } from "./components/WordCount";
 
-function App() {
 
-  const [word_count, setwordCount] = useState([])
+export default function App() {
+  const [word_count, setwordCount] = useState();
 
   useEffect(() => {
     fetch('/texts/1').then(response =>
@@ -21,10 +21,10 @@ function App() {
     <div className="App">
       <h1> WORD COUNTER </h1>
       <TextForm />
-      <WordCount word_count={ word_count } />
+      {!word_count && 
+        <p> Text input is required!</p>}
+      {word_count && <WordCount word_count={word_count} />}
       <CodeLink />
     </div>
   );
 }
-
-export default App;
