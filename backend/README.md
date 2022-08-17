@@ -1,4 +1,4 @@
-# BACKEND MODULE
+## BACKEND MODULE
 
 This module aims to develop a basic API in Flask.
 
@@ -16,9 +16,9 @@ The application is developed with:
 
 ## Installation
 
-First, make sure you have <b>Python</b> and <b>pip</b> installed in your computer.
+First, make sure you have <b>Python</b> and <b>pip</b> installed on your computer.
 
-In the project '/backend' directory, run the following command to install required packages: 
+In the project '/backend' directory, run the following command to install the required packages: 
 
 `pip install requirements.txt `
 
@@ -28,4 +28,4 @@ Inside the '/backend/src' directory, run:
 
 `python run.py`
 
-The application will be running in the URL [http://localhost:5000](http://localhost:5000).
+The application will be running at the URL [http://localhost:5000](http://localhost:5000).
