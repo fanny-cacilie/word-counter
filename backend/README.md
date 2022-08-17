@@ -1,18 +1,31 @@
-# WORD COUNTER API
+# BACKEND MODULE
 
-This repository aims to develop a basic Rest API in Flask. 
-The Web API consists in CRUD operations for the entities: text.
+This module aims to develop a basic API in Flask.
+
+Follow the next steps to run the backend application locally. 
+
+If you'd like, it is possible to [install and run the application using Docker](../README.md).
+
+## Technologies
+
+The application is developed with:
+
+- [Python]("https://www.python.org/")
+- [pip]("https://pypi.org/project/pip/")
+
 
 ## Installation
 
-Install the required packages with 
+First, make sure you have <b>Python</b> and <b>pip</b> installed in your computer.
+
+In the project '/backend' directory, run the following command to install required packages: 
 
 `pip install requirements.txt `
 
 ## Running
 
-Inside the directory, run:
+Inside the '/backend/src' directory, run:
 
-`python app.py`
+`python run.py`
 
-And you can test the Web API endpoints using Postman or Insomnia.
+The application will be running in the URL [http://localhost:5000](http://localhost:5000).
