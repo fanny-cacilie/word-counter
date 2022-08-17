@@ -3,7 +3,7 @@ import { Box, TextField } from "@mui/material";
 
 import SubmitButton from "./submitButton";
 
-export default function TextForm() {
+export default function TextForm({ onNewCount }) {
   const [text, setText] = useState("");
 
   return (
@@ -26,8 +26,7 @@ export default function TextForm() {
         />
       </Box>
 
-     <SubmitButton text={text}/>
-      
+      <SubmitButton text={text} onNewCount={onNewCount} />
     </div>
   );
 }

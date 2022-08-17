@@ -1,8 +1,7 @@
 import React from "react";
 import { Button } from "@mui/material";
 
-export default function SubmitButton({ text }) {
-
+export default function SubmitButton({ text, onNewCount }) {
   return (
     <div className="submitBtn">
       <Button
@@ -23,6 +22,7 @@ export default function SubmitButton({ text }) {
           });
           if (res_delete && res_post.ok) {
             console.log("response ok");
+            onNewCount();
           }
         }}
       >
