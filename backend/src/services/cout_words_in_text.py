@@ -1,2 +1,2 @@
-def count_words(text):
+def count_words(text: str):
     return len(text.split())
