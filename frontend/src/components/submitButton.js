@@ -4,7 +4,7 @@ import { Button } from "@mui/material";
 export default function SubmitButton({ text }) {
 
   return (
-    <div>
+    <div className="submitBtn">
       <Button
         type="submit"
         variant="contained"
