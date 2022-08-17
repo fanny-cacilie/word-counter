@@ -1,4 +1,4 @@
-# FRONTEND MODULE
+## FRONTEND MODULE
 
 This module aims to develop the application interface.
 
@@ -17,20 +17,20 @@ The application is developed with:
 
 ## Install
 
-First, make sure you have <b>Node</b> and <b>npm</b> installed in your computer.
+First, make sure you have <b>Node</b> and <b>npm</b> installed on your computer.
 
-In the project '/frontend' directory, run the following command to install required dependencies: 
+In the project '/frontend' directory, run the following command to install the required dependencies: 
 
 ### `npm install`
 
 ## Run the application
 
-After instalation, it is possible to start the application by running:
+After installation, it is possible to start the application by running:
 
 ### `npm start`
 
 Runs the app in the development mode.
 
-It is necessary to have [backend module](../backend/README.md) running correctly on port 5000.
+It is necessary to have the [backend module](../backend/README.md) running correctly on port 5000.
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
