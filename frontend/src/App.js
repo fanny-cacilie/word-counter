@@ -9,7 +9,7 @@ export default function App() {
   const [word_count, setwordCount] = useState();
 
   const onNewCount = async () => {
-    const res = await fetch("/texts/1");
+    const res = await fetch("texts/1");
     const json = await res.json();
     setwordCount(json.word_count);
   };

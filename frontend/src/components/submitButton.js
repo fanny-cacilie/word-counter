@@ -8,12 +8,12 @@ export default function SubmitButton({ text, onNewCount }) {
         type="submit"
         variant="contained"
         onClick={async () => {
-          const res_delete = await fetch("/remove/1", {
+          const res_delete = await fetch("remove/1", {
             method: "DELETE",
           });
 
           const form = { text };
-          const res_post = await fetch("/submit", {
+          const res_post = await fetch("submit", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
