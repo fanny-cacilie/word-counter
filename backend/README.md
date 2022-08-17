@@ -1,8 +1,7 @@
-# HOTELS REST API
+# WORD COUNTER API
 
 This repository aims to develop a basic Rest API in Flask. 
-The Web API consists in CRUD operations for the entities: hotels and users.
-Also includes user operations, such as register, authentication, login, logout.
+The Web API consists in CRUD operations for the entities: text.
 
 ## Installation
 

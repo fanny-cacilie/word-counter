@@ -5,7 +5,7 @@ class TextModel(database.Model):
     __tablename__ = "texts"
 
     text_id = database.Column(database.Integer, primary_key=True)
-    text = database.Column(database.String())
+    text = database.Column(database.String)
     word_count = database.Column(database.Integer)
 
     def __init__(self, text, word_count):
