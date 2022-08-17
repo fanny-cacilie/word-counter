@@ -1,6 +1,6 @@
 # WORD COUNTER
 
-This project aims to develop a application that given an text input submitted by an user, it returns the number of words contained in the text.
+This project aims to develop an application that given a text input submitted by a user, it returns the number of words contained in the text.
 
 Follow the next steps to install and run the application using Docker containers.
 
@@ -15,12 +15,12 @@ The application is developed with:
 
 ## Install and run the application
 
-First, make sure you have <b>Docker</b> and <b>docker-compose</b> installed in your computer.
+First, make sure you have <b>Docker</b> and <b>docker-compose</b> installed on your computer.
 
-In the root directory of the project, run the following command to build the images, create and run containers for backend and frontend.
+In the root directory of the project, run the following command to build the images, and create and run containers for the backend and frontend applications.
 
 ### `docker-compose up -d`
 
-To avoid proxy errors, it may be necessary to update the proxy parameter, in [package.json](./frontend/package.json) to the backend URL running in the container, such as: http://word-counter-backend:5000.
+To avoid proxy errors, it may be necessary to update the proxy parameter, in package.json to point to the URL running in the backend container, such as http://word-counter-backend:5000.
 
 It is possible to check the application running in the indicated URL of the frontend container.
