@@ -26,8 +26,6 @@ class TextSubmission(Resource):
     def post(self):
         kwargs = args.parse_args()
         kwargs['word_count'] = count_words(kwargs['text'])
-        if kwargs['word_count'] == 0:
-            kwargs['word_count'] = None
         text = TextModel(**kwargs)
         text.save_text()
         return {"message": "Text form submitted successfully"}, 201
